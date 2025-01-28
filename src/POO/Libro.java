@@ -1,18 +1,19 @@
 package POO;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Libro {
     private String titulo;
     private Autor autor;
     private int paginas;
-    private Tema tema;
+    private List<Tema> tema;
 
-    public Libro(String titulo, Autor autor, int paginas, Tema tema) {
+    public Libro(String titulo, Autor autor, int paginas) {
         this.titulo = titulo;
         this.autor = autor;
         this.paginas = paginas;
-        this.tema = tema;
+        this.tema = new ArrayList<>();
     }
 
     public String getTitulo() {
@@ -39,16 +40,16 @@ public class Libro {
         this.paginas = paginas;
     }
 
-    public Tema getTema() {
+    public List<Tema> getTema() {
         return tema;
     }
 
-    public void setTema(Tema tema) {
-        this.tema = tema;
+    public void addTema (Tema tema) {
+        this.tema.add(tema);
     }
 
     @Override
     public String toString() {
-        return this.titulo + " " + this.autor + " " + this.paginas + " " + this.tema;
+        return this.titulo + " " + this.autor.getNombre() + " " + this.paginas;
     }
 }
