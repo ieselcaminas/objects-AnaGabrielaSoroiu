@@ -37,9 +37,7 @@ public class Cuenta {
     }
 
     public void ingresar(double cantidad) {
-        if (cantidad < 0) {
-            System.out.println("El valor de la cuenta no puede ser negativo.");
-        } else {
+        if (cantidad > 0) {
             this.cantidad += cantidad;
         }
     }
