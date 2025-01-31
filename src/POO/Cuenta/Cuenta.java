@@ -1,4 +1,4 @@
-package POO;
+package POO.Cuenta;
 
 import java.util.Scanner;
 
