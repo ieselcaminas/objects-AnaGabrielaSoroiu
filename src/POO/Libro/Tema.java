@@ -1,4 +1,4 @@
-package POO;
+package POO.Libro;
 
 public class Tema {
     private String nombre;

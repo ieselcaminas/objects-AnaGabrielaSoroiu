@@ -1,4 +1,4 @@
-package POO;
+package POO.Libro;
 
 public class Autor {
     private String nombre;
