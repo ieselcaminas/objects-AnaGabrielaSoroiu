@@ -33,7 +33,7 @@ public class Cliente {
     }
 
     public void addPrestamo(Prestamo prestamo) {
-        prestamos.add(prestamo);
+        this.prestamos.add(prestamo);
     }
 
     public List<CuentaCorriente> getCuentasCorrientes() {
@@ -41,11 +41,11 @@ public class Cliente {
     }
 
     public void addCuentaCorriente(CuentaCorriente cuentaCorriente) {
-        cuentasCorrientes.add(cuentaCorriente);
+        this.cuentasCorrientes.add(cuentaCorriente);
     }
 
     @Override
     public String toString() {
-        return this.dni + " - " + this.nombre;
+        return "Cliente: " + this.dni + " - " + this.nombre;
     }
 }

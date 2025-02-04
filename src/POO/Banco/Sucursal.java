@@ -43,7 +43,7 @@ public class Sucursal {
     }
 
     public void addCuentaCorriente(CuentaCorriente cuentaCorriente) {
-        cuentasCorrientes.add(cuentaCorriente);
+        this.cuentasCorrientes.add(cuentaCorriente);
     }
 
     public List<Prestamo> getPrestamos() {
@@ -51,11 +51,11 @@ public class Sucursal {
     }
 
     public void addPrestamo(Prestamo prestamo) {
-        prestamos.add(prestamo);
+        this.prestamos.add(prestamo);
     }
 
     @Override
     public String toString() {
-        return this.n_suc + " - " + this.localizacion;
+        return "Sucursal: " + this.n_suc + " - " + this.localizacion;
     }
 }

@@ -7,11 +7,13 @@ public class CuentaCorriente {
     private int n_cc;
     private String privilegio;
     private List<Cliente> clientes;
+    private List<Domiciliacion> domiciliaciones;
 
     public CuentaCorriente(int n_cc, String privilegio) {
         this.n_cc = n_cc;
         this.privilegio = privilegio;
         this.clientes = new ArrayList<>();
+        this.domiciliaciones = new ArrayList<>();
     }
 
     public int getN_cc() {
@@ -31,11 +33,19 @@ public class CuentaCorriente {
     }
 
     public void addCliente(Cliente cliente) {
-        clientes.add(cliente);
+        this.clientes.add(cliente);
+    }
+
+    public List<Domiciliacion> getDomiciliaciones() {
+        return domiciliaciones;
+    }
+
+    public void addDomiciliacion(Domiciliacion domiciliacion) {
+        this.domiciliaciones.add(domiciliacion);
     }
 
     @Override
     public String toString() {
-        return this.n_cc + " - " + this.privilegio;
+        return "Cuenta Corriente: " + this.n_cc + " - " + this.privilegio;
     }
 }

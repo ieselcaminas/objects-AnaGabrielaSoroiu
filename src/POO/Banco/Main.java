@@ -26,6 +26,10 @@ public class Main {
                 sucursalCajamar.getCuentasCorrientes().add(cuentaPaquito);
                 cuentaPaquito.addCliente(paquito);
 
+
+                Domiciliacion domiciliacionPaquito = new Domiciliacion(1, "gas", cuentaPaquito);
+                cuentaPaquito.addDomiciliacion(domiciliacionPaquito);
+
         Banco santander = new Banco(2, "Santander");
         bancos.add(santander);
 
@@ -35,6 +39,11 @@ public class Main {
                 System.out.println("\t" + s);
                 for (CuentaCorriente cc : s.getCuentasCorrientes()) {
                     System.out.println("\t\t" + cc);
+
+                    for(Domiciliacion d : cc.getDomiciliaciones()) {
+                        System.out.println("\t\t\t" + d);
+                    }
+
                     for(Cliente c: cc.getClientes()) {
                         System.out.println("\t\t\t" + c);
                         for(Prestamo p: c.getPrestamos()) {

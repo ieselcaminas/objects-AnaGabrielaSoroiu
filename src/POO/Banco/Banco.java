@@ -36,6 +36,6 @@ public class Banco {
 
     @Override
     public String toString() {
-        return this.n_ent + " - " + this.nombre;
+        return "Banco: " + this.n_ent + " - " + this.nombre;
     }
 }
