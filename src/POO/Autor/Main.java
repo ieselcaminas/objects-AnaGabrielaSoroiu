@@ -43,6 +43,8 @@ public class Main {
             fantasia.addLibro(anillos);
             fantasia.addLibro(harryPotter);
 
+            Historico historico = new Historico("hoy", "mañana", anillos1, david);
+
         Editorial sextoPiso = new Editorial(2, "Sexto Piso");
 
         editoriales.add(mirahadas);
