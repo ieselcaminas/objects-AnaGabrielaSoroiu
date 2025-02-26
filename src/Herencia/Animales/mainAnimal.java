@@ -2,6 +2,7 @@ package Herencia.Animales;
 
 public class mainAnimal {
     public static void main(String[] args) {
+        //Faltan las interfaces
         Perro perro = new Perro("Nico");
         perro.comunicarse();
         perro.traerZapatillas();
